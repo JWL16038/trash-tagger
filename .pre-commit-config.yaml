@@ -16,3 +16,21 @@ repos:
     rev: v0.19.1
     hooks:
     -   id: gitlint
+    #Pylint
+-   repo: local
+    hooks:
+    -   id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args:
+            [
+            "--fail-on",
+            "F",
+            "E",
+            "--reports", # Only display messages
+            "n",
+            "--score", # Don't display the score
+            "n",
+            ]
