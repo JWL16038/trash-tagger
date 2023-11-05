@@ -24,14 +24,13 @@ jobs:
       with:
         options: "--check --verbose"
         src: "./src"
-        jupyter: true
-        version: "21.5b1"
+        version: "~= 22.0"
 
   pylint:
       name: Pylint
       runs-on: ubuntu-latest
       steps:
-        - run: pylint $(git ls-files '*.py') --error-only --reports y
+        - run: pylint **/*.py --error-only --reports y
 
   # pullrequests:
   #   name: Name Check
