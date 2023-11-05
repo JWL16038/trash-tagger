@@ -18,17 +18,19 @@ jobs:
   black:
     name: Black
     runs-on: ubuntu-latest
+    needs: setup
 
     steps:
     - uses: psf/black@stable
       with:
         options: "--check --verbose"
-        src: "./src"
         version: "~= 22.0"
 
   pylint:
       name: Pylint
       runs-on: ubuntu-latest
+      needs: setup
+
       steps:
         - run: pylint **/*.py --error-only --reports y
 
