@@ -32,7 +32,7 @@ jobs:
 
       steps:
         - run: pip install pylint
-        - run: pylint $(git ls-files '*.py') --errors-only --reports y
+        - run: find . -type f -name "*.py" | xargs pylint --errors-only --reports y
 
   # pullrequests:
   #   name: Name Check
