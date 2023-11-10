@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: Slashgear/action-check-pr-title@v4.3.0
         with:
-          regexp: "^(chore|docs|feature|fix|refactor|merge):\\s+[a-zA-Z0-9_ ]*\\s+\\(#[0-9_]+\\)" # Regex the title should match.
-          helpMessage: "Example: 'feature: Example of a title (#1)'"
+          regexp: "^(chore|docs|feature|fix|refactor|merge):\\s+.*" # Regex the title should match.
+          helpMessage: "Example: 'feature: Example of a title'"
